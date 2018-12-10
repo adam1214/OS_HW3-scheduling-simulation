@@ -558,6 +558,7 @@ void shell_mode()
     makecontext(&shell,(void (*)(void))shell_mode,0);
 
     while(1) {
+        printf("$ ");
         str_clear(comm,100);
 
         scanf(" %[^\n]", &comm);
